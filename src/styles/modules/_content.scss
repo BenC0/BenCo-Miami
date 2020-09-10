@@ -1,0 +1,33 @@
+#hero {
+	display: flex;
+	height: calc(100vh - (var(--body-padding) * 3));
+	flex-direction: column;
+	background: var(--header-gradient);
+	justify-content: center;
+	position: relative;
+
+	.content {
+		z-index: 1;
+		position: relative;
+		color: var(--white);
+		text-align: center;
+		transform: translateY(-75%);
+
+		// opacity: 0;
+
+		h1 {
+			font-size: 5em;
+			margin: 0;
+		}
+
+		p {
+			margin: .75em 0 0;
+			font-size: 1.2em;
+		}
+	}
+}
+
+.page {
+	background: var(--purple);
+	min-height: 50vh;
+}

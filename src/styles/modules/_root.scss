@@ -1,2 +1,49 @@
 :root {
+	--cyan: #0BD2D3;
+	--blue: #156FD4;
+	--pink: #F990E8;
+	--hot-pink: #F8038D;
+	--black: #000000;
+	--white: #EFEFEF;
+	--purple: #8243F1;
+
+	--header-gradient:
+		linear-gradient(
+			to top,
+			var(--black) 0px,
+			var(--black) 25px,
+			var(--cyan) 25px,
+			var(--cyan) 50px,
+			var(--black) 50px,
+			var(--black) 75px,
+			var(--cyan) 75px,
+			var(--cyan) 100px,
+			var(--black) 100px,
+			var(--black) 115px,
+			var(--cyan) 115px,
+			var(--cyan) 140px,
+			var(--black) 140px,
+			var(--black) 150px,
+			var(--cyan) 150px,
+			var(--cyan) 175px,
+			var(--black) 175px,
+			var(--black) 185px,
+			transparent 185px
+		),
+
+		linear-gradient(
+			to bottom,
+			var(--hot-pink) 0%,
+			var(--blue) 60%,
+			var(--cyan) calc(100% - 185px)
+		)
+	;
+
+	--body-padding: 25px;
+	--body-padding-inverted: calc(var(--body-padding) * -1);
+	--header-border-radius: 1vw;
+
+	--border-overlay-min: var(--body-padding);
+	--border-overlay-mid: calc(var(--border-overlay-min) * 1.5);
+	--border-overlay-max: calc(var(--border-overlay-min) * 2.5);
 }

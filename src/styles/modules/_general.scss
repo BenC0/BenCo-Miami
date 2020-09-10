@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	background: var(--black);
 }
 
 *,
@@ -9,11 +10,17 @@ html {
 }
 
 body {
+	margin: var(--body-padding);
 	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
-	font-family: proxima-soft, sans-serif;
 
+	.body-font, & {
+		font-family: proxima-soft, sans-serif;
+	}
+
+
+	.header-font,
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
 		font-style: normal;
@@ -23,4 +30,41 @@ body {
 	b, strong, .bold {
 		font-weight: 700;
 	}
+
+	& > #hero {
+		border-top-left-radius: var(--header-border-radius); 
+		border-top-right-radius: var(--header-border-radius); 
+	}
+
+	& > footer {
+		border-bottom-left-radius: var(--header-border-radius); 
+		border-bottom-right-radius: var(--header-border-radius); 
+	}
+
+	& > * {
+		margin: var(--body-padding) 0;
+	}
+
+	.fade_out, 
+	.fade_in { 
+		animation-duration: 300ms;
+	}
+
+	.fade_out { 
+		animation: fade_out;
+	}
+	.fade_in {
+		animation: fade_in;
+	}
+
+}
+
+@keyframes fade_in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fade_out {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
 }

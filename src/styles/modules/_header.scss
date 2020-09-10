@@ -1,0 +1,36 @@
+header {
+	top: var(--body-padding);
+	left: var(--body-padding);
+	right: var(--body-padding);
+	z-index: 10;
+	position: fixed;
+	margin: 0;
+
+	border-top-left-radius: var(--header-border-radius); 
+	border-top-right-radius: var(--header-border-radius); 
+	box-shadow: 0px var(--body-padding-inverted) 0px var(--body-padding) var(--black);
+
+	.content {
+		width: 100%;
+		color: white;
+		display: flex;
+		margin: 0 auto;
+		padding: 1.5em 3ch;
+		max-width: 990px;
+		align-items: center;
+		justify-content: space-between;
+
+		h1 {
+			margin: 0;
+		}
+
+		nav {
+			display: flex;
+			list-style: none;
+
+			li {
+				margin: 0 2ch;
+			}
+		}
+	}
+}
