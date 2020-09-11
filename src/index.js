@@ -1,8 +1,8 @@
 import './styles/style.scss';
-import contentCycle from "./scripts/content-cycle"
+import navigation from "./scripts/navigation"
 
 function init() {
-	contentCycle.fade()
+	navigation.init()
 }
 
 document.addEventListener("DOMContentLoaded", init);

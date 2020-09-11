@@ -13,8 +13,6 @@
 		text-align: center;
 		transform: translateY(-75%);
 
-		// opacity: 0;
-
 		h1 {
 			font-size: 5em;
 			margin: 0;
@@ -28,6 +26,14 @@
 }
 
 .page {
-	background: var(--purple);
+	padding: 2em;
+	z-index: 11;
 	min-height: 50vh;
+	background: var(--red-1);
+	transition: all .35s var(--bounce-timing);
+	transform: translateY(200%);
+
+	&.active_page {
+		transform: translateY(0%);
+	}
 }

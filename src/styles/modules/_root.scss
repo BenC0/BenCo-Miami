@@ -1,43 +1,76 @@
 :root {
-	--cyan: #0BD2D3;
-	--blue: #156FD4;
-	--pink: #F990E8;
-	--hot-pink: #F8038D;
+	--body-font: proxima-soft, sans-serif;
+	--header-font: kapelka-new, script;
+
 	--black: #000000;
-	--white: #EFEFEF;
-	--purple: #8243F1;
+	--white: #FFFFFF;
 
-	--header-gradient:
-		linear-gradient(
-			to top,
-			var(--black) 0px,
-			var(--black) 25px,
-			var(--cyan) 25px,
-			var(--cyan) 50px,
-			var(--black) 50px,
-			var(--black) 75px,
-			var(--cyan) 75px,
-			var(--cyan) 100px,
-			var(--black) 100px,
-			var(--black) 115px,
-			var(--cyan) 115px,
-			var(--cyan) 140px,
-			var(--black) 140px,
-			var(--black) 150px,
-			var(--cyan) 150px,
-			var(--cyan) 175px,
-			var(--black) 175px,
-			var(--black) 185px,
-			transparent 185px
-		),
+	/* Reds */
+	--red-1: #E22106;
+	--red-2: #551D15;
+	--red-3: #740E00;
+	--red-4: #D97E72;
 
-		linear-gradient(
-			to bottom,
-			var(--hot-pink) 0%,
-			var(--blue) 60%,
-			var(--cyan) calc(100% - 185px)
-		)
-	;
+	/* Pinks */
+	--pink-1: #F00592;
+	--pink-2: #55143B;
+	--pink-3: #8D0054;
+	--pink-4: #E881BE;
+
+	/* Blues */
+	--blue-1: #1DE1F0;
+	--blue-2: #115C61;
+	--blue-3: #007A84;
+	--blue-4: #8DBDC1;
+
+	/* Greens */
+	--green-1: #11F886;
+	--green-2: #0E4D2E;
+	--green-3: #00753B;
+	--green-4: #60B189;
+
+	/* Oranges */
+	--orange-1: #FF8800;
+	--orange-2: #4E2A00;
+	--orange-3: #B25F00;
+	--orange-4: #CE9862;
+
+	/* ??? */
+	--orange-1: #FF8800;
+	--orange-2: #4E2A00;
+	--orange-3: #B25F00;
+	--orange-4: #CE9862;
+
+	--gradient-1: linear-gradient(
+					to top right,
+					var(--pink-1) 0%,
+					var(--orange-1) 100%
+				);
+	--gradient-2: linear-gradient(
+					to top right,
+					var(--blue-1) 0%,
+					var(--orange-4) 100%
+				);
+	--gradient-3: linear-gradient(
+					to top,
+					var(--pink-1) 0%,
+					var(--pink-4) 100%
+				);
+	--gradient-4: linear-gradient(
+					to top left,
+					var(--orange-1) 0%,
+					var(--green-4) 100%
+				);
+	--gradient-5: linear-gradient(
+					to bottom right,
+					var(--orange-4) 0%,
+					var(--pink-1) 100%
+				);
+	--gradient-6: linear-gradient(
+					to bottom right,
+					var(--pink-4) 0%,
+					var(--blue-1) 100%
+				);
 
 	--body-padding: 25px;
 	--body-padding-inverted: calc(var(--body-padding) * -1);
@@ -46,4 +79,8 @@
 	--border-overlay-min: var(--body-padding);
 	--border-overlay-mid: calc(var(--border-overlay-min) * 1.5);
 	--border-overlay-max: calc(var(--border-overlay-min) * 2.5);
+
+	--bounce-timing: cubic-bezier(.68,-0.25,.27,1.25);
+
+	--header-height: 4em;
 }

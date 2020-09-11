@@ -1,0 +1,266 @@
+.shape_gallery {
+	display: flex;
+	padding: 0 var(--shape-margin);
+	margin: 10vh 0 0;
+	align-items: left;
+	position: relative;
+	height: 40vh;
+	transition: all .35s var(--bounce-timing);
+
+	@media screen and (max-width: 990px) {
+		flex-direction: column;
+	}
+
+	.shape {
+		cursor: pointer;
+		max-width: var(--shape-width);
+		width: 100%;
+		margin: 0 var(--shape-margin) var(--shape-margin);
+		position: absolute;
+		top: 0;
+		height: 100%;
+		color: var(--white);
+		right: 0%;
+		will-change: scale;
+		transition: all .35s var(--bounce-timing);
+
+		&.active {
+			z-index: 10;
+			.title {
+				opacity: 1;
+			}
+		}
+
+		&::before {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: "";
+			z-index: 0;
+			position: absolute;
+		}
+
+		@media screen and (max-width: 990px) {
+			flex-direction: column;
+			min-height: var(--header-height);
+		}
+
+		&-1 {
+			left: calc(-.5 * var(--shape-margin));
+			clip-path: polygon(
+				var(--shape-margin) calc(3 * var(--shape-margin)),
+				var(--shape-margin) calc(100% - var(--shape-margin)),
+				calc(100% - var(--shape-margin)) calc(100% - (2 * var(--shape-margin))),
+				calc(100% - var(--shape-margin)) var(--shape-margin)
+			);
+			background: var(--gradient-1);
+			padding: calc(var(--shape-margin) * 3) 0 calc(var(--shape-margin) * 2);
+
+			&::before {
+				mix-blend-mode: unset;
+				background: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+			}
+		}
+
+		&-2 {
+			left: calc((var(--shape-offset) * 1) - (.5 * var(--shape-margin)));
+			clip-path: polygon(
+				0% 0%,
+				0% calc(100% - (1 * var(--shape-margin))),
+				100% 100%,
+				100% calc(1 * var(--shape-margin))
+			);
+			background: var(--gradient-2);
+			padding: var(--shape-margin) 0;
+
+			&::before {
+				mix-blend-mode: unset;
+				background: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+			}
+		}
+
+		&-3 {
+			left: calc((var(--shape-offset) * 2) + (1 * var(--shape-margin)));
+			clip-path: polygon(
+				0% calc(.7 * var(--shape-margin)),
+				0% calc(100% - (1 * var(--shape-margin))),
+				100% calc(100% - (2 * var(--shape-margin))),
+				100% 0%
+			);
+			background: var(--gradient-3);
+			padding: var(--shape-margin) 0 calc((2 * var(--shape-margin)));
+
+			&::before {
+				mix-blend-mode: hard-light;
+				background: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+			}
+		}
+
+		&-4 {
+			left: calc((var(--shape-offset) * 3) + (var(--shape-margin) * 2 ) );
+			clip-path: polygon(
+				calc(1.2 * var(--shape-margin)) 0%,
+				0% 100%,
+				100% 100%,
+				calc(100% - (1.2 * var(--shape-margin))) 0%
+			);
+			background: var(--gradient-4);
+			padding: var(--shape-margin) 0 calc((2 * var(--shape-margin)));
+
+			&::before {
+				mix-blend-mode: luminosity;
+				background: url("https://www.transparenttextures.com/patterns/cross-scratches.png");
+			}
+		}
+
+		&-5 {
+			left: calc((var(--shape-offset) * 4) + (var(--shape-margin) * 3 ) );
+			clip-path: polygon(
+				0% var(--shape-margin),
+				calc(1 * var(--shape-margin)) 100%,
+				calc(100% - (1.2 * var(--shape-margin))) calc(100% - var(--shape-margin)),
+				100% var(--shape-margin)
+			);
+			background: var(--gradient-5);
+			padding: var(--shape-margin) 0 calc((2 * var(--shape-margin)));
+
+			&::before {
+				mix-blend-mode: hard-light;
+				background: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+			}
+		}
+
+		&-6 {
+			left: calc((var(--shape-offset) * 5) + (var(--shape-margin) * 4 ) );
+			clip-path: polygon(
+				var(--shape-margin) var(--shape-margin),
+				var(--shape-margin) calc(100% - var(--shape-margin)),
+				calc(100% - var(--shape-margin)) calc(100% - (2 * var(--shape-margin))),
+				calc(100% - var(--shape-margin)) calc(3 * var(--shape-margin))
+			);
+			background: var(--gradient-6);
+			padding: var(--shape-margin) 0 calc((2 * var(--shape-margin)));
+
+			&::before {
+				opacity: 0.6;
+				mix-blend-mode: color-dodge;
+				background: url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+			}
+		}
+	}
+
+	.title {
+		left: 0;
+		right: 0;
+		top: 50%;
+		font-size: 2em;
+		margin: 0;
+		z-index: 5;
+		text-align: center;
+		position: absolute;
+		transform: translateY(-50%);
+		transition: opacity .1s ease-in .35s;
+		opacity: 0;
+
+		.active_header & {
+			opacity: 1;
+		}
+	}
+
+	.hide_menu & {
+		margin: 0vh 0 0;
+		height: 50px;
+
+		.shape {
+			@media screen and (max-width: 990px) {
+				min-height: 0px;
+			}
+
+			& {
+				.title {
+					transition-delay: 0;
+					opacity: .3;
+				}
+				transition: all .35s var(--bounce-timing) .1s;
+				bottom: calc(100% - 50px);
+				left: 50%;
+
+				&.shape-1 {
+					transform: translateX( calc( -250% - (var(--shape-margin) * 4) ));
+					clip-path: polygon(
+						var(--shape-margin) calc(3 * var(--shape-margin)),
+						var(--shape-margin) calc(100% - var(--shape-margin)),
+						calc(100% - var(--shape-margin)) calc(100% - (2 * var(--shape-margin))),
+						calc(100% - var(--shape-margin)) var(--shape-margin)
+					);
+				}
+
+				&.shape-2 {
+					transform: translateX( calc( -150% - (var(--shape-margin) * 3) ));
+					clip-path: polygon(
+						0% 0%,
+						0% calc(100% - (1 * var(--shape-margin))),
+						100% 100%,
+						100% calc(1 * var(--shape-margin))
+					);
+				}
+
+				&.shape-3 {
+					transform: translateX( calc( -50% - (var(--shape-margin) * 2) ) );
+					clip-path: polygon(
+						0% calc(.7 * var(--shape-margin)),
+						0% calc(100% - (1 * var(--shape-margin))),
+						100% calc(100% - (2 * var(--shape-margin))),
+						100% 0%
+					);
+				}
+
+				&.shape-4 {
+					transform: translateX( calc( 0% + (var(--shape-margin) * 1) ) );
+					clip-path: polygon(
+						calc(1.2 * var(--shape-margin)) 0%,
+						0% 100%,
+						100% 100%,
+						calc(100% - (1.2 * var(--shape-margin))) 0%
+					);
+				}
+
+				&.shape-5 {
+					transform: translateX( calc( (100%) + (var(--shape-margin) * 1) ) );
+					clip-path: polygon(
+						0% var(--shape-margin),
+						calc(1 * var(--shape-margin)) 100%,
+						calc(100% - (1.2 * var(--shape-margin))) calc(100% - var(--shape-margin)),
+						100% var(--shape-margin)
+					);
+				}
+
+				&.shape-6 {
+					transform: translateX( calc( (200%) + (var(--shape-margin) * 1) ) );
+					clip-path: polygon(
+						var(--shape-margin) var(--shape-margin),
+						var(--shape-margin) calc(100% - var(--shape-margin)),
+						calc(100% - var(--shape-margin)) calc(100% - (2 * var(--shape-margin))),
+						calc(100% - var(--shape-margin)) calc(3 * var(--shape-margin))
+					);
+				}
+			}
+
+			&.active {
+				.title {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	body:not(.hide_menu) &:hover {
+		.shape:hover {
+			transform: scale(1.1);
+		}
+		.shape:not(:hover) {
+			transform: scale(.9);
+		}
+	}
+}
