@@ -10,8 +10,9 @@ export function nav_click(e) {
 			})
 			document.body.classList.remove('hide_menu')
 			document.body.classList.add('active_header')
+			document.querySelector('.page[page="Skills"]').classList.remove('active_page')
 		}
-	} else if (document.body.classList.contains('active_header')) {
+	} else {
 		let navItems = nav.children
 		let el = e.currentTarget
 		navItems.forEach(nI => {
@@ -21,10 +22,6 @@ export function nav_click(e) {
 		document.body.classList.add('hide_menu')
 		document.body.classList.remove('active_header')
 		document.querySelector('.page[page="Skills"]').classList.add('active_page')
-	} else if (document.body.classList.contains('hide_menu')) {
-		document.body.classList.remove('hide_menu')
-		document.body.classList.add('active_header')
-		document.querySelector('.page[page="Skills"]').classList.remove('active_page')
 	}
 }
 

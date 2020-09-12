@@ -1,10 +1,21 @@
 footer {
-	display: none;
+	// display: none;
 	padding: 2em 0;
-	color: var(--white);
-	background: var(--cyan);
-	margin-top: var(--body-padding);
+	color: transparent;
 	margin-bottom: 2em;
+	background: var(--white);
+	background-clip: text;
+	margin-top: var(--body-padding);
+
+	.active_page[page="Skills"] ~ & {
+		background: linear-gradient(
+			to right,
+			var(--orange-1) 30%,
+			var(--pink-1) 50%,
+			var(--red-1) 70%
+		);
+		background-clip: text;
+	}
 
 	.signature {
 		display: flex;
