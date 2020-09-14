@@ -36,23 +36,12 @@
 	}
 
 	&[page="Skills"] {
-		display: grid;
-		grid-template-rows: repeat(auto);
-		grid-template-columns: repeat(4, 1fr);
+		display: flex;
+		flex-direction: column;
 
 		.shape {
-			align-self: center;
-		}
-
-		.callout,
-		.callout-2,
-		.callout-3 {
 			.content {
 				color: var(--white);
-				&::after {
-					background: url("https://www.transparenttextures.com/patterns/bright-squares.png"), var(--gradient-1-fl);
-				}
-
 				&::before {
 					mix-blend-mode: unset;
 					background: url("https://www.transparenttextures.com/patterns/bright-squares.png");
@@ -60,23 +49,20 @@
 			}
 		}
 
-		.languages {
-			grid-row: 1;
-			grid-column: 1 / span 2;
-			.content {
-				color: var(--white);
-				background: var(--gradient-1-fl);
-			}
-		}
-
-		.design-tools {
-			grid-row: 1;
-			grid-column: 3 / span 2;
-			.title {
-				background: var(--gradient-1-fl-rv);
-			}
-			.content {
-				background: var(--gradient-1);
+		.intro-container {
+			.shape {
+				&:nth-child(1) .content {
+					background: var(--gradient-1-fl);
+				}
+				&:nth-child(2) .content {
+					background: var(--gradient-1);
+				}
+				&:nth-child(3) .content {
+					background: var(--gradient-1-rv);
+				}
+				&:nth-child(4) .content {
+					background: var(--gradient-1-fl);
+				}
 			}
 		}
 
@@ -93,8 +79,6 @@
 			.content {
 				color: var(--white);
 				background: var(--gradient-1);
-				text-align: left;
-				padding-top: 5em;
 				&::before {
 					mix-blend-mode: unset;
 					background: url("https://www.transparenttextures.com/patterns/bright-squares.png");
