@@ -41,6 +41,7 @@
 
 		.shape {
 			.content {
+				background: var(--gradient-1);
 				color: var(--white);
 				&::before {
 					mix-blend-mode: unset;
@@ -49,27 +50,12 @@
 			}
 		}
 
-		.intro-container {
-			.shape {
-				&:nth-child(1) .content {
-					background: var(--gradient-1-fl);
-				}
-				&:nth-child(2) .content {
-					background: var(--gradient-1);
-				}
-				&:nth-child(3) .content {
-					background: var(--gradient-1-rv);
-				}
-				&:nth-child(4) .content {
-					background: var(--gradient-1-fl);
-				}
-			}
+		.callout-trio-container .content {
+			background: var(--gradient-1-tr);
 		}
 
 		.ab_testing {
-			grid-row: 2;
 			text-align: left;
-			grid-column: 1 / span 4;
 			background: transparent;
 
 			&::after {

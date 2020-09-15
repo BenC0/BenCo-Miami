@@ -1,3 +1,50 @@
+.shape {
+	display: block;
+
+	.title,
+	.floating_title {
+		font-size: 2em;
+		margin: .5em 0 .5em;
+		text-align: left;
+		z-index: 1;
+		position: relative;
+		grid-row: 1;
+		grid-column: 1 / span 2;
+		color: var(--white);
+		* {
+			margin: 0;
+		}
+	}
+
+	.floating_title {
+		margin: 0 0 -.5em;
+	}
+
+	&::before,
+	&::after,
+	.floating_title::before,
+	.floating_title::after,
+	.content::before,
+	.content::after {
+		pointer-events: none;
+	}
+
+	.content {
+		padding: 2em 1em;
+		margin: 1em;
+		position: relative;
+		&::before {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: "";
+			z-index: 0;
+			position: absolute;
+		}
+	}
+}
+
 .shape_gallery {
 	display: flex;
 	padding: 0 var(--shape-margin);
@@ -186,7 +233,7 @@
 				left: 50%;
 
 				&.shape-1 {
-					transform: translateX( calc( -250% - (var(--shape-margin) * 4) ));
+					transform: translateX(-220%);
 					clip-path: polygon(
 						var(--shape-margin) calc(3 * var(--shape-margin)),
 						var(--shape-margin) calc(100% - var(--shape-margin)),
@@ -196,7 +243,7 @@
 				}
 
 				&.shape-2 {
-					transform: translateX( calc( -150% - (var(--shape-margin) * 3) ));
+					transform: translateX(-110%);
 					clip-path: polygon(
 						0% 0%,
 						0% calc(100% - (1 * var(--shape-margin))),
@@ -206,7 +253,6 @@
 				}
 
 				&.shape-3 {
-					transform: translateX( calc( -50% - (var(--shape-margin) * 2) ) );
 					clip-path: polygon(
 						0% calc(.7 * var(--shape-margin)),
 						0% calc(100% - (1 * var(--shape-margin))),
@@ -216,7 +262,7 @@
 				}
 
 				&.shape-4 {
-					transform: translateX( calc( 0% + (var(--shape-margin) * 1) ) );
+					transform: translateX(110%);
 					clip-path: polygon(
 						calc(1.2 * var(--shape-margin)) 0%,
 						0% 100%,
@@ -226,22 +272,12 @@
 				}
 
 				&.shape-5 {
-					transform: translateX( calc( (100%) + (var(--shape-margin) * 1) ) );
+					transform: translateX(220%);
 					clip-path: polygon(
 						0% var(--shape-margin),
 						calc(1 * var(--shape-margin)) 100%,
 						calc(100% - (1.2 * var(--shape-margin))) calc(100% - var(--shape-margin)),
 						100% var(--shape-margin)
-					);
-				}
-
-				&.shape-6 {
-					transform: translateX( calc( (200%) + (var(--shape-margin) * 1) ) );
-					clip-path: polygon(
-						var(--shape-margin) var(--shape-margin),
-						var(--shape-margin) calc(100% - var(--shape-margin)),
-						calc(100% - var(--shape-margin)) calc(100% - (2 * var(--shape-margin))),
-						calc(100% - var(--shape-margin)) calc(3 * var(--shape-margin))
 					);
 				}
 			}
@@ -260,47 +296,6 @@
 		}
 		.shape:not(:hover) {
 			transform: scale(.9);
-		}
-	}
-}
-
-.shape {
-	display: block;
-	background: var(--white);
-
-	.floating_title {
-		font-size: 2em;
-		margin: 0 0 -1em;
-		text-align: left;
-		z-index: 1;
-		position: relative;
-		grid-row: 1;
-		grid-column: 1 / span 2;
-		color: var(--white);
-		* {
-			margin: 0;
-		}
-	}
-
-	&::before,
-	&::after,
-	.floating_title::before,
-	.floating_title::after,
-	.content::before,
-	.content::after {
-		pointer-events: none;
-	}
-
-	.content {
-		position: relative;
-		&::before {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: "";
-			z-index: 0;
-			position: absolute;
 		}
 	}
 }
@@ -328,10 +323,10 @@
 			grid-column: 1;
 			.content {
 				clip-path: polygon(
-					1rem 1rem,
-					1rem 100%,
+					0rem 0rem,
+					0rem 100%,
 					100% 100%,
-					100% 0.5rem
+					100% 0rem
 				);
 			}
 		}
@@ -341,9 +336,9 @@
 			grid-column: 2;
 			.content {
 				clip-path: polygon(
-					1rem .5rem,
+					0rem 0rem,
 					0rem 100%,
-					100% calc(100% - 1rem),
+					100% 100%,
 					100% 0rem
 				);
 			}
@@ -354,8 +349,8 @@
 			grid-column: 1;
 			.content {
 				clip-path: polygon(
-					1rem 1rem,
-					1rem calc(100% - 1rem),
+					0rem 0rem,
+					0rem 100%,
 					100% 100%,
 					100% 0rem
 				);
@@ -368,9 +363,9 @@
 			.content {
 				clip-path: polygon(
 					0rem 0rem,
-					1rem calc(100% - 1rem),
+					0rem 100%,
 					100% 100%,
-					calc(100% - 1rem) 1rem
+					100% 0rem
 				);
 			}
 		}
@@ -392,6 +387,59 @@
 				font-size: 1.2em;
 				line-height: 1.7;
 			}
+		}
+	}
+}
+
+.callout-trio-container {
+	display: grid;
+	grid-row-gap: 1em;
+	grid-column-gap: 1em;
+	align-items: stretch;
+	grid-template-rows: auto auto;
+	--max-columns: 12;
+	grid-template-columns: repeat(var(--max-columns), 1fr);
+
+	> .title,
+	> .floating_title {
+		margin: 0;
+		grid-row: 1;
+		font-size: 2rem;
+		--offset: 4;
+		grid-column: var(--offset) / span calc(var(--max-columns) - var(--offset) + 1);
+	
+		> * {
+			margin: 0;
+		}
+	}
+
+	.shape {
+		grid-row: 2;
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(2) {
+			grid-column: 1 / span 4;
+		}
+
+		&:nth-child(3) {
+			grid-column: 5 / span 3;
+			margin-top: -1em;
+			margin-bottom: 1em;
+		}
+
+		&:nth-child(4) {
+			grid-column: 8 / span 5;
+		}
+	}
+
+	.content {
+		flex-grow: 1;
+		margin-left: 0;
+		margin-right: 0;
+
+		> :first-child {
+			margin-top: 0;
 		}
 	}
 }
@@ -433,27 +481,11 @@
 			flex-direction: column;
 			padding: 2.5rem 2.5rem 3rem;
 			clip-path: polygon(
-				1rem 2rem,
-				1rem calc(100% - 2rem),
-				calc(100% - 1rem) calc(100% - 1rem),
-				calc(100% - 0rem) 1rem
+				0rem 0rem,
+				0rem 100%,
+				100% 100%,
+				100% 0rem
 			);
-			&::after {
-				transform: rotate(4deg);
-			}
-
-			&::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				right: 1rem;
-				width: .5rem;
-				border: .5rem solid var(--black);
-				border-top: 0;
-				border-bottom: 0;
-				box-sizing: content-box;
-			}
 		}
 	}
 }

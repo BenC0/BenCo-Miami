@@ -7,14 +7,57 @@ footer {
 	background-clip: text;
 	margin-top: var(--body-padding);
 
+	.active_page ~ & {
+		background-clip: text;
+	}
+
 	.active_page[page="Skills"] ~ & {
-		background: linear-gradient(
+		background-image: linear-gradient(
 			to right,
 			var(--orange-1) 30%,
 			var(--pink-1) 50%,
 			var(--red-1) 70%
 		);
-		background-clip: text;
+	}
+
+	.active_page[page="Experience"] ~ & {
+		background-image: linear-gradient(
+			to right,
+			var(--blue-1) 0%,
+			var(--orange-4) 100%
+		);
+	}
+
+	.active_page[page="Projects"] ~ & {
+		background-image: linear-gradient(
+			to top,
+			var(--pink-1) 0%,
+			var(--pink-4) 100%
+		);
+	}
+
+	.active_page[page="Blog"] ~ & {
+		background-image: linear-gradient(
+			to top,
+			var(--pink-1) 0%,
+			var(--pink-4) 100%
+		);
+	}
+
+	.active_page[page="About"] ~ & {
+		background-image: linear-gradient(
+			to top,
+			var(--pink-1) 0%,
+			var(--pink-4) 100%
+		);
+	}
+
+	.active_page[page="About"] ~ & {
+		background-image: linear-gradient(
+			to top,
+			var(--pink-1) 0%,
+			var(--pink-4) 100%
+		);
 	}
 
 	.signature {

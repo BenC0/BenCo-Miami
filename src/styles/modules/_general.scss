@@ -17,7 +17,7 @@ body {
 	font-style: normal;
 
 	--shape-margin: 10px;
-	--shape-width: calc((100% - (var(--shape-margin) * 6)) / 6);
+	--shape-width: calc((100% - (var(--shape-margin) * 5)) / 5);
 	--shape-offset: var(--shape-width);
 
 	&.hide_menu {
@@ -30,6 +30,13 @@ body {
 		font-family: var(--body-font);
 	}
 
+	.floating_title {
+		color: var(--white);
+	}
+
+	.small {
+		font-size: .8em;
+	}
 
 	.header-font,
 	h1, h2 {

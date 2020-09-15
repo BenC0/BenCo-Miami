@@ -21,7 +21,13 @@ export function nav_click(e) {
 		el.classList.add('active')
 		document.body.classList.add('hide_menu')
 		document.body.classList.remove('active_header')
-		document.querySelector('.page[page="Skills"]').classList.add('active_page')
+
+		let nextPage = document.querySelector(`.page[page="${el.textContent.trim()}"]`)
+		let currentPage = document.querySelector(`.page.active_page`)
+		if (currentPage != null) {
+			currentPage.classList.remove('active_page')
+		}
+		nextPage.classList.add('active_page')
 	}
 }
 
