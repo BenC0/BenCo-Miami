@@ -1,0 +1,11 @@
+#pageTitle {
+	padding: 190px 0 0 var(--gutter-size);
+	text-transform: uppercase;
+	margin-bottom: var(--gutter-size);
+	
+	& h1 {
+		margin-bottom: 0;
+		font-weight: 400;
+		font-size: var(--heading-font-size);
+	}
+}

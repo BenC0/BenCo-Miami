@@ -1,0 +1,51 @@
+.cta-container {
+	width: 100%;
+	display: block;
+	margin-bottom: var(--gutter-size);
+
+	& .cta {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		&:hover {
+			& .icon {
+				border-color: var(--page-color-secondary);
+				& path {
+					fill: var(--page-color-primary);
+				}
+			}
+			& .label {
+				color: var(--page-color-primary);
+			}
+		}
+
+		& .icon {
+			flex-grow: 0;
+			flex-shrink: 0;
+
+			margin-right: var(--gutter-size);
+
+			width: 50px;
+			text-align: center;
+			padding: .5rem .5rem .3rem;
+			border: 1px solid var(--white);
+			transition: all .15s ease-in;
+
+
+			& svg {
+				display: inline-block;
+			}
+			& path {
+				fill: var(--white);
+				transition: all .15s ease-in;
+			}
+		}
+
+		& .label {
+			font-weight: 400;
+			transition: all .15s ease-in;
+			color: var(--white);
+		}
+	}
+}
