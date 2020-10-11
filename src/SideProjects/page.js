@@ -18,7 +18,7 @@ function SideProjects() {
 		title: "Classy Royale",
 		"copy": [
 			<p>Clash Royale Ladder Game Tracker </p>,
-			<p><a href="https://classyroyale.netlify.app/" target="_blank">https://classyroyale.netlify.app/</a> - (Use Code "QLLUJGVY" for example data.)</p>,
+			<p><a href="https://classyroyale.netlify.app/" rel="noopener noreferrer" target="_blank">https://classyroyale.netlify.app/</a> - (Use Code "QLLUJGVY" for example data.)</p>,
 			<p>Using Python to handle the APIs and my knowledge of web development, I created this tool while on furlough to enable users to monitor and analyse their game performance. While the project was hindered by an understandably limited access to player data, this was a good side project as it allowed me to further develop my understanding of UI/UX design. Most of my work is focused on e-commerce and this project was the first opportunity I had to work on an analytical tool. </p>,
 			<strong>Toolkit:</strong>,
 			<p>HTML / CSS / JavaScript / Python / Google Analytics / Hotjar</p>
@@ -47,7 +47,7 @@ function SideProjects() {
 		title: "This Site",
 		"copy": [
 			<p>This site is always evolving, this design is actually the 8th since I started 6 years ago!</p>,
-			<p>The current version is served through Netlify and linked to the repo at <a href="https://github.com/BenC0/BenCoh-Miami" target="_blank">https://github.com/BenC0/BenCoh-Miami</a> </p>,
+			<p>The current version is served through Netlify and linked to the repo at <a rel="noopener noreferrer" href="https://github.com/BenC0/BenCoh-Miami" target="_blank">https://github.com/BenC0/BenCoh-Miami</a> </p>,
 			<strong>Toolkit:</strong>,
 			<p>HTML / CSS / JavaScript / React</p>
 		]
@@ -55,7 +55,7 @@ function SideProjects() {
 	const Misc = {
 		title: "Misc.",
 		"copy": [
-			<p>There are loads of small examples and projects done for the purpose of curiosity and learning on my <a href="https://codepen.io/Benco/" target="_blank">Codepen</a></p>,
+			<p>There are loads of small examples and projects done for the purpose of curiosity and learning on my <a rel="noopener noreferrer" href="https://codepen.io/Benco/" target="_blank">Codepen</a></p>,
 		]
 	}
 	return [
