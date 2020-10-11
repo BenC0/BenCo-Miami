@@ -139,6 +139,8 @@ b, strong, .bold {
 .subtitle,
 .title {
 	position: relative;
+	color: transparent;
+	animation: ColorFadeIn 1s forwards 1s;
 	&::before {
 		content: "";
 		top: 0;
@@ -146,7 +148,7 @@ b, strong, .bold {
 		width: auto;
 
 		right: -15px;
-		left: -15px;
+		left: calc(100% + 15px);
 
 		display: block;
 		position: absolute;
@@ -194,6 +196,15 @@ b, strong, .bold {
 	100% {
 		right: calc(100% + 10px);
 		left: -15px;
+	}
+}
+
+@keyframes ColorFadeIn {
+	0% {
+		color: transparent;
+	}
+	100% {
+		color: var(--white);
 	}
 }
 
