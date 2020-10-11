@@ -127,12 +127,12 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1rem;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0 0 var(--gutter-size);
 }
 
 b, strong, .bold {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .copy,
