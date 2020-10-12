@@ -135,12 +135,14 @@ body:not(.nav-active) {
 		background: var(--white);
 	}
 
+	& .SectionTitle .title::before,
 	& .subtitle::before {
 		left: -15px;
 		right: calc(100% + 10px);
 		animation: stretchOut .5s forwards;
 	}
 
+	& .SectionTitle .title::after,
 	& .subtitle::after {
 		left: -15px;
 		right: calc(100% + 10px);
