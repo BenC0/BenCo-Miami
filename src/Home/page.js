@@ -10,7 +10,7 @@ function Homepage(props) {
 	}
 	const Content = {
 		"title": "Conversion Optimisation Specialist",
-		"copy": <p>Currently employed by N Brown Group, I utilise my expertise in web development, UI/UX design and behavioural psychology to optimise websites from a wide variety of sectors to improve their performance.</p>
+		"copy": <p>I utilise my expertise in web development, UI/UX design and behavioural psychology to optimise websites from a wide variety of sectors to improve their performance.</p>
 	}
 	return [
 		<PageTitle title={"Benji Cohen"} />,
