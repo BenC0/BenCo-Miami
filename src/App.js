@@ -36,7 +36,7 @@ function App() {
 						<NavLink to="/contact" exact>Contact</NavLink>
 					</li>
 					<li>
-						<NavLink to="/curriculum-vitae" target="_blank" exact>CV</NavLink>
+						<NavLink to="/curriculum-vitae" exact>CV</NavLink>
 					</li>
 				</ul>
 			</nav>
