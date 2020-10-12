@@ -3,8 +3,11 @@ import PageTitle from "../Modules/PageTitle"
 import pageSwap from "../Modules/pageSwap"
 import ContentSection from "../Modules/ContentSection"
 
-function Toolkit() {
-	pageSwap("Toolkit")
+function Toolkit(props) {
+	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
+	if (!!doPageSwap) {
+		pageSwap("Toolkit")
+	}
 	const CodingLanguages = {
 		title: "Coding Languages",
 		"copy": <p>Javascript & jQuery<br />HTML<br />CSS and SASS/SCSS<br />Python</p>

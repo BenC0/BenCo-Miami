@@ -41,6 +41,11 @@
 	--contact-color-accent: var(--orange-bright);
 	--contact-color-secondary: var(--red-muted);
 	--contact-color-tertiary: var(--white);
+ 
+	--cv-color-primary: var(--blue-bright);
+	--cv-color-accent: var(--orange-bright);
+	--cv-color-secondary: var(--green-bright);
+	--cv-color-tertiary: var(--orange-bright);
 
 	--font-family: futura-pt, sans-serif;
  
@@ -103,6 +108,12 @@ body {
 		--page-color-secondary: var(--contact-color-secondary);
 		--page-color-tertiary: var(--contact-color-tertiary);
 	}
+	&[page="CV"] {
+		--page-color-primary: var(--cv-color-primary);
+		--page-color-accent: var(--cv-color-accent);
+		--page-color-secondary: var(--cv-color-secondary);
+		--page-color-tertiary: var(--cv-color-tertiary);
+	}
 }
 
 #root {
@@ -132,6 +143,12 @@ h1, h2, h3, h4, h5, h6 {
 
 b, strong, .bold {
 	font-weight: 600;
+}
+
+@media print {
+	.hideOnPrint {
+		display: none;
+	}
 }
 
 .copy,
@@ -218,6 +235,10 @@ b, strong, .bold {
 	100% {
 		opacity: 0;
 	}
+}
+
+.full-width {
+	width: 100%;
 }
 
 /* Grid Framework */

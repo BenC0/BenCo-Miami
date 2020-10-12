@@ -6,6 +6,7 @@ import Toolkit from './Toolkit/page';
 import Experience from './Experience/page';
 import SideProjects from './SideProjects/page';
 import Contact from './Contact/page';
+import CV from './CV/page';
 
 import {
   BrowserRouter as Router,
@@ -34,25 +35,31 @@ function App() {
 					<li>
 						<NavLink to="/contact" exact>Contact</NavLink>
 					</li>
+					<li>
+						<NavLink to="/curriculum-vitae" target="_blank" exact>CV</NavLink>
+					</li>
 				</ul>
 			</nav>
 			{/* A <Switch> looks through its children <Route>s and
 			renders the first one that matches the current URL. */}
 			<Switch>
 				<Route path="/" exact>
-					<Homepage />
+					<Homepage doPageSwap={true} />
 				</Route>
 				<Route path="/toolkit" exact>
-					<Toolkit />
+					<Toolkit doPageSwap={true} />
 				</Route>
 				<Route path="/experience" exact>
-					<Experience />
+					<Experience doPageSwap={true} />
 				</Route>
 				<Route path="/side-projects" exact>
-					<SideProjects />
+					<SideProjects doPageSwap={true} />
+				</Route>
+				<Route path="/curriculum-vitae" exact>
+					<CV doPageSwap={true} />
 				</Route>
 				<Route path="/contact" exact>
-					<Contact />
+					<Contact doPageSwap={true} />
 				</Route>
 			</Switch>
 		</Router>,

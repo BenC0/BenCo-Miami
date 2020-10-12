@@ -4,8 +4,11 @@ import pageSwap from "../Modules/pageSwap"
 import ContentSection from "../Modules/ContentSection"
 import CallToAction from "../Modules/CallToAction"
 
-function Contact() {
-	pageSwap("Contact")
+function Contact(props) {
+	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
+	if (!!doPageSwap) {
+		pageSwap("Contact")
+	}
 	const WorkRelated = {
 		"title": "Work Related",
 		"copy": [

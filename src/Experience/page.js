@@ -4,8 +4,11 @@ import SectionTitle from "../Modules/SectionTitle"
 import pageSwap from "../Modules/pageSwap"
 import ContentSection from "../Modules/ContentSection"
 
-function Experience() {
-	pageSwap("Experience")
+function Experience(props) {
+	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
+	if (!!doPageSwap) {
+		pageSwap("Experience")
+	}
 	const PageIntro = {
 		"title": "Conversion Optimisation",
 		"copy": [

@@ -9,6 +9,10 @@
 	right: 0;
 
 	cursor: pointer;
+
+	@media print {
+		display: none;
+	}
 }
 
 

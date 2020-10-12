@@ -1,0 +1,51 @@
+[page="CV"] {
+/*	--white: #000;
+	--black: #fff;*/
+
+	& .title_container {
+		margin-bottom: 20px;
+		@media print {
+			& .background {
+				display: none !important;
+			}
+		}
+	}
+
+	& .cv_container {
+		@media print {
+	        clear: both;
+	        page-break-before: always;
+	    }
+	}
+
+	& .cv_container-toolkit {
+		@media print {
+			margin-top: 200px; 
+		}
+		& .toolkit {
+			display: grid;
+			grid-column-gap: 1em;
+			grid-template-columns: repeat(2, 1fr);
+
+			@media screen and (min-width: 700px) {
+				& .content {
+					grid-column: auto / span 1;
+				}
+			}
+		}
+	}
+
+	@media print {
+		& a::after {
+			margin: 0 1ch;
+			content: "(" attr(href) ")";
+		}
+
+		& a, & a::after {
+			color: var(--white) !important;
+		}
+		& nav a::after {
+			content: none;
+		}
+	}
+}

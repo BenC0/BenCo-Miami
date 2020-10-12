@@ -3,8 +3,11 @@ import PageTitle from "../Modules/PageTitle"
 import pageSwap from "../Modules/pageSwap"
 import ContentSection from "../Modules/ContentSection"
 
-function SideProjects() {
-	pageSwap("SideProjects")
+function SideProjects(props) {
+	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
+	if (!!doPageSwap) {
+		pageSwap("SideProjects")
+	}
 	const loCRO = {
 		title: "loCRO",
 		"copy": [

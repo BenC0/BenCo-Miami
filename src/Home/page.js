@@ -3,8 +3,11 @@ import PageTitle from "../Modules/PageTitle"
 import pageSwap from "../Modules/pageSwap"
 import ContentSection from "../Modules/ContentSection"
 
-function Homepage() {
-	pageSwap("Home")
+function Homepage(props) {
+	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
+	if (!!doPageSwap) {
+		pageSwap("Home")
+	}
 	const Content = {
 		"title": "Conversion Optimisation Specialist",
 		"copy": <p>Currently employed by N Brown Group, I utilise my expertise in web development, UI/UX design and behavioural psychology to optimise websites from a wide variety of sectors to improve their performance.</p>
