@@ -59,8 +59,8 @@ function SideProjects() {
 		]
 	}
 	return [
+		<PageTitle title={"Side Projects"} />,
 		<div className="sideProjects page d-span-11 m-span-3">
-			<PageTitle title={"Side Projects"} />
 			<ContentSection content={loCRO} />
 			<ContentSection content={ClassyRoyale} />
 			<ContentSection content={SocialProof} />

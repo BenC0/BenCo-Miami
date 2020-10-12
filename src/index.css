@@ -51,8 +51,6 @@
 
 	font-size: 22px;
 	--gutter-size: 0.72rem;
-
-	--heading-font-size: 1.81rem;
 }
 
 *, *::before, *::after {
@@ -109,6 +107,7 @@ body {
 
 #root {
 	margin: 0 auto;
+	grid-template-rows: minmax(200px, 250px) auto;
 }
 
 .page {
@@ -137,7 +136,7 @@ b, strong, .bold {
 
 .copy,
 .subtitle,
-.title {
+.SectionTitle .title {
 	position: relative;
 	color: transparent;
 	animation: ColorFadeIn 1s forwards 1s;
@@ -157,18 +156,13 @@ b, strong, .bold {
 	}
 }
 
-.subtitle::before,
-.title::before {
-	animation: AccentSlideIn 1s forwards .5s;
+.SectionTitle .title::before,
+.subtitle::before {
 	animation: AccentSlideIn 1s forwards .5s;
 }
 
 .copy::before {
 	animation: FadeOut .35s forwards .65s;
-}
-
-.subtitle::before {
-	background: var(--page-color-secondary);
 }
 
 .copy::before {

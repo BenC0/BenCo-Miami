@@ -37,8 +37,8 @@ function Contact() {
 		]
 	}
 	return [
+		<PageTitle title={"Contact"} />,
 		<div className="contact page d-span-11 m-span-3">
-			<PageTitle title={"Contact"} />
 			<ContentSection content={WorkRelated} />
 			<ContentSection content={AnythingElse} />
 		</div>

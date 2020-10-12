@@ -75,8 +75,8 @@ function Experience() {
 		]
 	}
 	return [
+		<PageTitle title={"Experience"} />,
 		<div className="experience page d-span-11 m-span-3">
-			<PageTitle title={"Experience"} />
 			<ContentSection content={PageIntro} />
 			<SectionTitle title={"Who I've Worked with"} />
 			<ContentSection content={AmbroseWilson} />

@@ -26,8 +26,8 @@ function Toolkit() {
 		"copy": <p>Speedcurve<br />GT Metrix</p>
 	}
 	return [
+		<PageTitle title={"Toolkit"} />,
 		<div className="toolkit page d-span-11 m-span-3">
-			<PageTitle title={"Toolkit"} />
 			<ContentSection content={CodingLanguages} />
 			<ContentSection content={CodingTools} />
 			<ContentSection content={OptimisationTools} />

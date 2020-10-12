@@ -135,15 +135,13 @@ body:not(.nav-active) {
 		background: var(--white);
 	}
 
-	& .subtitle::before,
-	& .title::before {
+	& .subtitle::before {
 		left: -15px;
 		right: calc(100% + 10px);
 		animation: stretchOut .5s forwards;
 	}
 
-	& .subtitle::after,
-	& .title::after {
+	& .subtitle::after {
 		left: -15px;
 		right: calc(100% + 10px);
 		animation: stretchOut .5s forwards .5s;
@@ -159,6 +157,11 @@ body:not(.nav-active) {
 		background: var(--black);
 	}
 
+	& #pageTitle .background .shape:before {
+		animation: TitleStretchOut .5s forwards .5s;
+	}
+
+	& #pageTitle,
 	& .copy,
 	& .subtitle,
 	& .title {
@@ -177,5 +180,14 @@ body:not(.nav-active) {
 	}
 	100% {
 		right: -15px;
+	}
+}
+
+@keyframes TitleStretchOut {
+	0% {
+		right: 100%;
+	}
+	100% {
+		right: 0;
 	}
 }
