@@ -1,6 +1,6 @@
 [page="CV"] {
-/*	--white: #000;
-	--black: #fff;*/
+	--white: #000;
+	--black: #fff;
 
 	& .title_container {
 		margin-bottom: 20px;

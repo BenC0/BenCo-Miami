@@ -35,9 +35,6 @@ function App() {
 					<li>
 						<NavLink to="/contact" exact>Contact</NavLink>
 					</li>
-					<li>
-						<NavLink to="/curriculum-vitae" exact>CV</NavLink>
-					</li>
 				</ul>
 			</nav>
 			{/* A <Switch> looks through its children <Route>s and
@@ -54,9 +51,6 @@ function App() {
 				</Route>
 				<Route path="/side-projects" exact>
 					<SideProjects doPageSwap={true} />
-				</Route>
-				<Route path="/curriculum-vitae" exact>
-					<CV doPageSwap={true} />
 				</Route>
 				<Route path="/contact" exact>
 					<Contact doPageSwap={true} />

@@ -34,9 +34,6 @@ function CV() {
 		</div>,
 		<div className="cv_container cv_container-sideprojects d-span-12 m-span-4 full-width">
 			<SideProjects doPageSwap={doPageSwap} />
-		</div>,
-		<div className="cv_container cv_container-contact d-span-12 m-span-4 full-width">
-			<Contact doPageSwap={doPageSwap} />
 		</div>
 	]
 }
