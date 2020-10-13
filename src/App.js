@@ -6,7 +6,6 @@ import Toolkit from './Toolkit/page';
 import Experience from './Experience/page';
 import SideProjects from './SideProjects/page';
 import Contact from './Contact/page';
-import CV from './CV/page';
 
 import {
   BrowserRouter as Router,

@@ -6,7 +6,6 @@ import Homepage from '../Home/page';
 import Toolkit from '../Toolkit/page';
 import Experience from '../Experience/page';
 import SideProjects from '../SideProjects/page';
-import Contact from '../Contact/page';
 import ContentSection from "../Modules/ContentSection"
 
 function CV() {
