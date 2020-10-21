@@ -117,13 +117,14 @@ body {
 }
 
 #root {
-	margin: 0 auto;
+	margin: 0 auto 0;
 	grid-template-rows: minmax(200px, 250px) auto;
 }
 
 .page {
 	width: 100%;
 	display: flex;
+	margin-top: 2rem;
 	flex-direction: column;
 }
 
@@ -250,7 +251,7 @@ b, strong, .bold {
 		max-width: 1200px;
 		grid-template-rows: auto;
 		justify-items: flex-start;
-		grid-gap: var(--gutter-size);
+		grid-column-gap: var(--gutter-size);
 	}
 }
 @media screen and (min-width: 700px) {

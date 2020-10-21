@@ -2,11 +2,10 @@
 	--border-size: 10px;
 	--negative-border-size: -10px;
 
-	padding: 80px 0 0;
 	width: 100%;
+	padding: 80px 0 0;
 	margin-bottom: 0;
-	font-size: 2.25rem;
-
+	overflow: hidden;
 	font-size: clamp(2.25rem, 10vw, 3.5rem);
 	
 	& .title_container {
@@ -27,6 +26,7 @@
 		& .shape {
 			display: none;
 			width: 33.333%;
+			overflow: hidden;
 			position: relative;
 			border-right: var(--border-size) solid var(--black);
 			background: linear-gradient(
@@ -61,11 +61,20 @@
 				animation: TitleSlideInAlt 1s forwards .5s;
 			}
 		}
+
+		&.foreground {
+			z-index: 1;
+			& .shape {
+				background: none !important;
+				background-blend-mode: normal !important;
+			}
+		}
 	}
 	
 	& h1 {
 		left: 0;
 		bottom: 0;
+		z-index: 2;
 		position: absolute;
 
 		font-weight: 800;
@@ -86,11 +95,13 @@
 		& .shape {
 			position: relative;
 			border-right: var(--border-size) solid var(--black);
-			background: linear-gradient(
-							45deg,
-							var(--page-color-primary),
-							var(--page-color-accent)
-						);
+			background-blend-mode: color-burn;
+			background: url('/images/mocha-grunge.png'),
+					linear-gradient(
+						45deg,
+						var(--page-color-primary),
+						var(--page-color-accent)
+					);
 
 			&:nth-child(1) {
 				display: block;
@@ -107,10 +118,40 @@
 				width: 5ch;
 			}
 
-			&::after {
-				mix-blend-mode: color-burn;
-				background: url('/images/mocha-grunge.png');
+		}
+
+		& .palm-tree {
+			bottom: -1.5em;
+			left: 8ch;
+			width: auto;
+			position: absolute;
+			mix-blend-mode: overlay;
+
+			&.right {
+				transform: rotateY(180deg);
 			}
+
+			& svg {
+				height: 4em;
+			}
+
+			& path {
+				fill: var(--blue-bright);
+			}
+		}
+
+		& .circle {
+			--circle-size: 4em;
+			width: var(--circle-size);
+			height: var(--circle-size);
+			border-radius: var(--circle-size);
+
+			top: -1em;
+			left: -1em;
+			position: absolute;
+			mix-blend-mode: overlay;
+
+			background: var(--pink-bright);
 		}
 	}
 }
@@ -146,9 +187,9 @@
 				grid-column: 1 / span 1;
 				margin-top: var(--negative-border-size);
 				background: linear-gradient(
-								to top left,
-								var(--page-color-primary) 50%,
-								var(--page-color-accent) 150%
+								to top right,
+								var(--page-color-primary),
+								var(--page-color-accent)
 							);
 			}
 			&:nth-child(2) {
@@ -189,8 +230,7 @@
 	& .background {
 		display: grid;
 		gap: var(--border-size);
-		grid-template-columns: 2ch calc(100% - 2ch);
-		grid-template-rows: calc((160px - var(--border-size)) - .5em) .25em .25em;
+		grid-template-columns: 1ch 1fr 1fr 2ch 1fr;
 
 		& .shape {
 			width: 100%;
@@ -198,14 +238,15 @@
 			&:nth-child(1),
 			&:nth-child(2),
 			&:nth-child(3),
-			&:nth-child(4) {
-				display: block;
+			&:nth-child(4),
+			&:nth-child(5) {
 				border: 0;
+				grid-row: 1;
+				display: block;
 			}
-			&:nth-child(1) {
-				grid-column: 1;
-				grid-row: 1 / span 3;
-				transform: translateY(var(--negative-border-size));
+			&:nth-child(2),
+			&:nth-child(4) {
+				transform: translateY(calc(var(--negative-border-size) * .75));
 			}
 
 			&::after {
@@ -221,24 +262,60 @@
 	& .background {
 		display: grid;
 		gap: var(--border-size);
-		grid-template-columns: calc(100% - 5ch) 5ch;
-		grid-template-rows: calc((160px - var(--border-size)) - .5em) .25em .25em;
+		grid-template-columns: 2ch 2fr .5fr;
+		grid-template-rows: repeat(4, calc((160px - (var(--border-size) * 3))/4 ));
 
 		& .shape {
 			width: 100%;
+			background: linear-gradient(
+							40deg,
+							var(--page-color-primary),
+							var(--page-color-accent)
+						);
 
 			&:nth-child(1),
 			&:nth-child(2),
 			&:nth-child(3),
-			&:nth-child(4) {
-				display: block;
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
 				border: 0;
+				display: block;
+				grid-column: auto;
+			}
+
+			&:nth-child(1) {
+				grid-column: 1;
+				grid-row: 1 / span 3;
 				transform: translateY(var(--negative-border-size));
 			}
+
 			&:nth-child(2) {
+				grid-column: 1;
+				grid-row: 4;
+				transform: translateY(var(--negative-border-size));
+			}
+
+			&:nth-child(3) {
 				grid-column: 2;
+				grid-row: 1 / span 2;
+			}
+
+			&:nth-child(4) {
+				grid-column: 2;
+				grid-row: 3 / span 2;
+			}
+
+			&:nth-child(5) {
+				grid-column: 3;
 				grid-row: 1 / span 3;
-				transform: translateY(0);
+				transform: translateY(var(--border-size));
+			}
+
+			&:nth-child(6) {
+				grid-column: 3;
+				grid-row: 4;
+				transform: translateY(var(--border-size));
 			}
 
 			&::after {
