@@ -1,8 +1,8 @@
 import React from 'react';
-import PageTitle from "../Modules/PageTitle"
-import SectionTitle from "../Modules/SectionTitle"
-import pageSwap from "../Modules/pageSwap"
-import ContentSection from "../Modules/ContentSection"
+import PageTitle from "../Modules/PageTitle/init"
+import Title from "../Modules/Content/Title"
+import pageSwap from "../Modules/Utils/pageSwap"
+import Section from "../Modules/Content/Section"
 
 function Experience(props) {
 	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
@@ -80,14 +80,14 @@ function Experience(props) {
 	return [
 		<PageTitle title={"Experience"} />,
 		<div className="experience page d-span-11 m-span-3">
-			<ContentSection content={PageIntro} />
-			<SectionTitle title={"Who I've Worked with"} />
-			<ContentSection content={AmbroseWilson} />
-			<ContentSection content={JurysInn} />
-			<ContentSection content={MusicMagpie} />
-			<ContentSection content={AspinalOfLondon} />
-			<ContentSection content={BarrattHomes} />
-			<ContentSection content={Motoring} />
+			<Section content={PageIntro} />
+			<Title title={"Who I've Worked with"} />
+			<Section content={AmbroseWilson} />
+			<Section content={JurysInn} />
+			<Section content={MusicMagpie} />
+			<Section content={AspinalOfLondon} />
+			<Section content={BarrattHomes} />
+			<Section content={Motoring} />
 		</div>
 	]
 }

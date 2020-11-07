@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ContentSection(props) {
+function Section(props) {
 	return [
 		<div className="content m-span-3 d-span-12">
 			<h2 className="subtitle">{props.content.title}</h2>
@@ -9,4 +9,4 @@ function ContentSection(props) {
 	]
 }
 
-export default ContentSection;
+export default Section;

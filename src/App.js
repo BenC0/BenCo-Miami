@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import Menu from './Menu';
-import Homepage from './Home/page';
-import Toolkit from './Toolkit/page';
-import Experience from './Experience/page';
-import SideProjects from './SideProjects/page';
-import Contact from './Contact/page';
+import Menu from './Modules/Menu/init';
+import Homepage from './Pages/Home';
+import Toolkit from './Pages/Toolkit';
+import Experience from './Pages/Experience';
+import SideProjects from './Pages/SideProjects';
+import Contact from './Pages/Contact';
 
 import {
   BrowserRouter as Router,

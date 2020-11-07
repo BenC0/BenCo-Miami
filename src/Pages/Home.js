@@ -1,7 +1,7 @@
 import React from 'react';
-import PageTitle from "../Modules/PageTitle"
-import pageSwap from "../Modules/pageSwap"
-import ContentSection from "../Modules/ContentSection"
+import PageTitle from "../Modules/PageTitle/init"
+import pageSwap from "../Modules/Utils/pageSwap"
+import Section from "../Modules/Content/Section"
 
 function Homepage(props) {
 	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
@@ -15,7 +15,7 @@ function Homepage(props) {
 	return [
 		<PageTitle title={"Benji Cohen"} />,
 		<div className="home page d-span-11 m-span-3">
-			<ContentSection content={Content}/>
+			<Section content={Content}/>
 		</div>
 	]
 }

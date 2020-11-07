@@ -1,7 +1,7 @@
 import React from 'react';
-import PageTitle from "../Modules/PageTitle"
-import pageSwap from "../Modules/pageSwap"
-import ContentSection from "../Modules/ContentSection"
+import PageTitle from "../Modules/PageTitle/init"
+import pageSwap from "../Modules/Utils/pageSwap"
+import Section from "../Modules/Content/Section"
 
 function Toolkit(props) {
 	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
@@ -31,11 +31,11 @@ function Toolkit(props) {
 	return [
 		<PageTitle title={"Toolkit"} />,
 		<div className="toolkit page d-span-11 m-span-3">
-			<ContentSection content={CodingLanguages} />
-			<ContentSection content={CodingTools} />
-			<ContentSection content={OptimisationTools} />
-			<ContentSection content={SiteSpeedOptimisation} />
-			<ContentSection content={DesignTools} />
+			<Section content={CodingLanguages} />
+			<Section content={CodingTools} />
+			<Section content={OptimisationTools} />
+			<Section content={SiteSpeedOptimisation} />
+			<Section content={DesignTools} />
 		</div>
 	]
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SectionTitle(props) {
+function Title(props) {
 	return [
 		<div className="SectionTitle content m-span-4 d-span-12">
 			<h2 className="title">{props.title}</h2>
@@ -8,4 +8,4 @@ function SectionTitle(props) {
 	]
 }
 
-export default SectionTitle;
+export default Title;

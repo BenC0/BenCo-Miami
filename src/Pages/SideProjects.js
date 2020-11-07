@@ -1,7 +1,7 @@
 import React from 'react';
-import PageTitle from "../Modules/PageTitle"
-import pageSwap from "../Modules/pageSwap"
-import ContentSection from "../Modules/ContentSection"
+import PageTitle from "../Modules/PageTitle/init"
+import pageSwap from "../Modules/Utils/pageSwap"
+import Section from "../Modules/Content/Section"
 
 function SideProjects(props) {
 	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
@@ -64,12 +64,12 @@ function SideProjects(props) {
 	return [
 		<PageTitle title={"Side Projects"} />,
 		<div className="sideProjects page d-span-11 m-span-3">
-			<ContentSection content={loCRO} />
-			<ContentSection content={ClassyRoyale} />
-			<ContentSection content={SocialProof} />
-			<ContentSection content={ToTu} />
-			<ContentSection content={enCapture} />
-			<ContentSection content={Misc} />
+			<Section content={loCRO} />
+			<Section content={ClassyRoyale} />
+			<Section content={SocialProof} />
+			<Section content={ToTu} />
+			<Section content={enCapture} />
+			<Section content={Misc} />
 		</div>
 	]
 }

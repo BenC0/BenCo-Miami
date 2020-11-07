@@ -1,8 +1,8 @@
 import React from 'react';
-import PageTitle from "../Modules/PageTitle"
-import pageSwap from "../Modules/pageSwap"
-import ContentSection from "../Modules/ContentSection"
-import CallToAction from "../Modules/CallToAction"
+import PageTitle from "../Modules/PageTitle/init"
+import pageSwap from "../Modules/Utils/pageSwap"
+import Section from "../Modules/Content/Section"
+import CallToAction from "../Modules/CallToAction/init"
 
 function Contact(props) {
 	let doPageSwap = props.doPageSwap !== null || props.doPageSwap !== undefined ? props.doPageSwap : true
@@ -42,8 +42,8 @@ function Contact(props) {
 	return [
 		<PageTitle title={"Contact"} />,
 		<div className="contact page d-span-11 m-span-3">
-			<ContentSection content={WorkRelated} />
-			<ContentSection content={AnythingElse} />
+			<Section content={WorkRelated} />
+			<Section content={AnythingElse} />
 		</div>
 	]
 }
