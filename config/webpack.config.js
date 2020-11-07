@@ -97,6 +97,7 @@ module.exports = function(webpackEnv) {
           plugins: () => [
             postcssNesting(),
             require('postcss-flexbugs-fixes'),
+            require('postcss-zindex'),
             require('postcss-preset-env')({
               autoprefixer: {
                 flexbox: 'no-2009',

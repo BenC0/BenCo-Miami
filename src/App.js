@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import Menu from './Modules/Menu/init';
 import Homepage from './Pages/Home';

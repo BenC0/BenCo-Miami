@@ -1,0 +1,137 @@
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--white);
+	background: var(--black);
+
+	font-weight: 300;
+	font-family: var(--font-family);
+
+	&, & #root {
+		min-height: 100vh;
+	}
+
+	margin: 0;
+	padding: 0 1rem;
+
+	&[page="Home"] {
+		--page-color-primary: var(--home-color-primary);
+		--page-color-accent: var(--home-color-accent);
+		--page-color-secondary: var(--home-color-secondary);
+		--page-color-tertiary: var(--home-color-tertiary);
+	}
+	&[page="Toolkit"] {
+		--page-color-primary: var(--toolkit-color-primary);
+		--page-color-accent: var(--toolkit-color-accent);
+		--page-color-secondary: var(--toolkit-color-secondary);
+		--page-color-tertiary: var(--toolkit-color-tertiary);
+	}
+	&[page="Experience"] {
+		--page-color-primary: var(--experience-color-primary);
+		--page-color-accent: var(--experience-color-accent);
+		--page-color-secondary: var(--experience-color-secondary);
+		--page-color-tertiary: var(--experience-color-tertiary);
+	}
+	&[page="SideProjects"] {
+		--page-color-primary: var(--sideprojects-color-primary);
+		--page-color-accent: var(--sideprojects-color-accent);
+		--page-color-secondary: var(--sideprojects-color-secondary);
+		--page-color-tertiary: var(--sideprojects-color-tertiary);
+	}
+	&[page="Contact"] {
+		--page-color-primary: var(--contact-color-primary);
+		--page-color-accent: var(--contact-color-accent);
+		--page-color-secondary: var(--contact-color-secondary);
+		--page-color-tertiary: var(--contact-color-tertiary);
+	}
+	&[page="CV"] {
+		--page-color-primary: var(--cv-color-primary);
+		--page-color-accent: var(--cv-color-accent);
+		--page-color-secondary: var(--cv-color-secondary);
+		--page-color-tertiary: var(--cv-color-tertiary);
+	}
+}
+
+#root {
+	margin: 0 auto 0;
+	grid-template-rows: minmax(200px, 250px) auto;
+}
+
+.page {
+	width: 100%;
+	display: flex;
+	margin-top: 2rem;
+	flex-direction: column;
+}
+
+a {
+	color: var(--page-color-secondary);
+
+	&:hover {
+		color: var(--page-color-primary);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 var(--gutter-size);
+}
+
+b, strong, .bold {
+	font-weight: 600;
+}
+
+@media print {
+	.hideOnPrint {
+		display: none;
+	}
+}
+
+.copy,
+.subtitle,
+.SectionTitle .title {
+	position: relative;
+	color: transparent;
+	animation: ColorFadeIn 1s forwards 1s;
+	&::before {
+		content: "";
+		top: 0;
+		bottom: 0;
+		width: auto;
+
+		right: -15px;
+		left: calc(100% + 15px);
+
+		display: block;
+		position: absolute;
+		pointer-events: none;
+		background: var(--page-color-primary);
+	}
+}
+
+.SectionTitle .title::before,
+.subtitle::before {
+	animation: AccentSlideIn 1s forwards .5s;
+}
+
+.copy::before {
+	animation: FadeOut .35s forwards .65s;
+}
+
+.copy::before {
+	background: var(--black);
+}
+
+.subtitle {
+	top: 0;
+	z-index: 2;
+	position: sticky;
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	background: var(--black);
+}
+
+.full-width {
+	width: 100%;
+}
