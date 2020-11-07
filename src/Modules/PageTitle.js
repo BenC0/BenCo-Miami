@@ -2,7 +2,6 @@ import "./PageTitle.css"
 import React from 'react';
 
 export function Shapes(props) {
-	console.log(props)
 	let Shapes = <div className="background"></div>
 	switch (props.title) {
 		case "Benji Cohen":
