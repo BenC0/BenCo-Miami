@@ -1,8 +1,6 @@
 import "./PageTitle.css"
 import React from 'react';
 
-import PalmTree from "./assets/Palm-Tree-SVG"
-
 export function Shapes(props) {
 	console.log(props)
 	let Shapes = <div className="background"></div>
@@ -10,13 +8,6 @@ export function Shapes(props) {
 		case "Benji Cohen":
 			Shapes = [
 						<div className="background">
-							<div className="shape"></div>
-							<div className="shape"></div>
-							<div className="shape"></div>
-							<div className="circle"></div>
-							<div className="palm-tree right"> <PalmTree /> </div>
-						</div>,
-						<div className="background foreground">
 							<div className="shape"></div>
 							<div className="shape"></div>
 							<div className="shape"></div>
