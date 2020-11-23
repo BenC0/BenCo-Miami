@@ -59,9 +59,13 @@ body {
 
 .page {
 	width: 100%;
-	display: flex;
 	margin-top: 2rem;
+	
+	display: flex;
 	flex-direction: column;
+
+	z-index: 0;
+	position: relative;
 }
 
 a {
