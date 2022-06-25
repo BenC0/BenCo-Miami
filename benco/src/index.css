@@ -1,0 +1,68 @@
+:root {
+	--black: #000;
+	--white: #FFF;
+
+	--blue-bright: #1DE1F0;
+	--blue-muted: #8DBDC1;
+
+	--red-bright: #E22106;
+	--red-muted: #D97E72;
+
+	--orange-bright: #FF8800;
+	--orange-muted: #CE9862;
+
+	--pink-bright: #F00592;
+	--pink-muted: #E881BE;
+
+	--green-bright: #11F886;
+	--green-muted: #60B189;
+
+	--home-color-primary: var(--blue-bright);
+	--home-color-accent: var(--pink-bright);
+	--home-color-secondary: var(--blue-muted);
+	--home-color-tertiary: var(--white);
+
+	--toolkit-color-primary: var(--pink-bright);
+	--toolkit-color-accent: var(--blue-bright);
+	--toolkit-color-secondary: var(--pink-muted);
+	--toolkit-color-tertiary: var(--white);
+
+	--experience-color-primary: var(--green-bright);
+	--experience-color-accent: var(--orange-bright);
+	--experience-color-secondary: var(--green-muted);
+	--experience-color-tertiary: var(--white);
+
+	--sideprojects-color-primary: var(--orange-bright);
+	--sideprojects-color-accent: var(--green-bright);
+	--sideprojects-color-secondary: var(--orange-muted);
+	--sideprojects-color-tertiary: var(--white);
+ 
+	--contact-color-primary: var(--red-bright);
+	--contact-color-accent: var(--orange-bright);
+	--contact-color-secondary: var(--red-muted);
+	--contact-color-tertiary: var(--white);
+ 
+	--cv-color-primary: var(--blue-bright);
+	--cv-color-accent: var(--orange-bright);
+	--cv-color-secondary: var(--green-bright);
+	--cv-color-tertiary: var(--orange-bright);
+
+	--font-family: futura-pt, sans-serif;
+ 
+	--page-color-primary: var(--home-color-primary);
+	--page-color-accent: var(--home-color-accent);
+	--page-color-secondary: var(--home-color-secondary);
+	--page-color-tertiary: var(--home-color-tertiary);
+
+	font-size: 22px;
+	--gutter-size: 0.72rem;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@import "./modules/common/grid.css";
+@import "./modules/common/menu.css";
+@import "./modules/common/content.css";
+@import "./modules/common/animations.css";

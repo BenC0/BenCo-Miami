@@ -1,0 +1,41 @@
+@keyframes AccentSlideIn {
+	0% {
+		right: -15px;
+		left: calc(100% + 10px);
+	}
+	50% {
+		right: -15px;
+		left: -15px;
+	}
+	100% {
+		right: calc(100% + 10px);
+		left: -15px;
+	}
+}
+
+@keyframes ColorFadeIn {
+	0% {
+		color: transparent;
+	}
+	100% {
+		color: var(--white);
+	}
+}
+
+@keyframes FadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes FadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
